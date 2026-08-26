@@ -1,0 +1,12 @@
+# Frontend de TurnosGratis para Coolify. El sitio estático se hornea en la imagen;
+# la carpeta data/ (los enlaces frescos) se monta como volumen desde el host, así el
+# cron del host la actualiza y los enlaces se refrescan SIN redeploy.
+services:
+  turnosgratis-web:
+    build:
+      context: /opt/turnosgratis
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - /opt/turnosgratis/public/data:/usr/share/nginx/html/data:ro
+    # Coolify inyecta los labels de Traefik/Caddy en el deploy (dominio, SSL).
