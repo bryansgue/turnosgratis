@@ -35,6 +35,8 @@ const GAMES = {
     // rewards.coinmaster.com/rewards/rewards.html?c=CODE_YYYYMMDD
     linkRe: /https?:\/\/rewards\.coinmaster\.com\/rewards\/rewards\.html\?c=[a-zA-Z0-9_]+/g,
     dateRe: /_(\d{8})(?:$|[^\d])/,
+    // algunas fuentes embeben JSON con la cantidad de giros → captura {url, spins} juntos
+    richRe: /link_url\\?":\\?"(https:\/\/rewards\.coinmaster\.com\/rewards\/rewards\.html\?c=[a-zA-Z0-9_]+)\\?"[^}]*?spin_count\\?":(\d+)/g,
   },
   // TODO: monopolygo (dados) — patrón mnplygo.onelink.me / distinto; agregar tras validar.
 };
@@ -65,20 +67,30 @@ function verifyLive(url) {
 async function scrapeGame(key) {
   const g = GAMES[key];
   log(`== ${g.name} ==`);
-  // 1) juntar links de todas las fuentes
+  // 1) juntar links de todas las fuentes (+ cantidad de giros si la fuente la trae)
   const found = new Set();
+  const spinsByUrl = {};
   for (const src of g.sources) {
     const html = fetchHtml(src);
+    // captura rica: url + spin_count (JSON embebido)
+    let rich = 0;
+    if (g.richRe) {
+      let mm; g.richRe.lastIndex = 0;
+      while ((mm = g.richRe.exec(html)) !== null) {
+        const u = mm[1].replace(/^http:/, 'https:');
+        found.add(u); spinsByUrl[u] = parseInt(mm[2]); rich++;
+      }
+    }
     const m = html.match(g.linkRe) || [];
     m.forEach(u => found.add(u.replace(/^http:/, 'https:')));
-    log(`  ${src} → ${m.length} links`);
+    log(`  ${src} → ${m.length} links${rich ? ` (${rich} con cantidad)` : ''}`);
   }
   // 2) filtrar frescos por la fecha embebida
-  const fresh = ymd(0), win = [];
+  const win = [];
   for (let d = 0; d <= VALID_DAYS; d++) win.push(ymd(d));
   let links = [...found].map(url => {
     const dm = url.match(g.dateRe);
-    return { url, date: dm ? dm[1] : null };
+    return { url, date: dm ? dm[1] : null, spins: spinsByUrl[url] || null };
   }).filter(l => l.date && win.includes(l.date));
   // dedupe por código
   const seen = new Set();
@@ -103,7 +115,7 @@ async function scrapeGame(key) {
     game: key, name: g.name, unit: g.unit,
     updated_at: new Date().toISOString(),
     count: links.length,
-    links: links.map(l => ({ url: l.url, date: l.date })),
+    links: links.map(l => ({ url: l.url, date: l.date, spins: l.spins })),
   };
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(path.join(DATA_DIR, `${key}.json`), JSON.stringify(out, null, 2) + '\n');
