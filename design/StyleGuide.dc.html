@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  body{margin:0;background:#14110b;font-family:'Manrope',system-ui,sans-serif;color:#f6f1e6}
+  a{color:#f6c53f}a:hover{color:#ec9a3a}*{box-sizing:border-box}
+  .disp{font-family:'Space Grotesk',sans-serif}
+  .h{font-size:12px;font-weight:700;letter-spacing:1px;color:#726a58;text-transform:uppercase;margin:0 0 12px}
+  .sw{border-radius:12px;height:64px;display:flex;align-items:flex-end;padding:8px 10px;font-size:10.5px;font-weight:600}
+</style>
+</helmet>
+<div style="width:560px;background:#14110b;padding:30px">
+  <h2 class="disp" style="font-size:22px;font-weight:700;margin:0 0 4px">TurnosGratis · Guía de estilo</h2>
+  <p style="color:#a89e8a;font-size:13px;margin:0 0 26px">Premium · gamer · dorado de recompensa. Base oscura cálida.</p>
+
+  <p class="h">Colores</p>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:26px">
+    <div class="sw" style="background:#14110b;border:1px solid rgba(255,255,255,.1);color:#a89e8a">Fondo<br>#14110B</div>
+    <div class="sw" style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);color:#a89e8a">Superficie<br>+6% blanco</div>
+    <div class="sw" style="background:linear-gradient(135deg,#f6c53f,#ec9a3a);color:#211803">Dorado<br>#F6C53F</div>
+    <div class="sw" style="background:#ec9a3a;color:#211803">Ámbar<br>#EC9A3A</div>
+    <div class="sw" style="background:#57cf88;color:#0e2a19">Verde OK<br>#57CF88</div>
+    <div class="sw" style="background:#ff6b5e;color:#3a0f0b">Urgente<br>#FF6B5E</div>
+    <div class="sw" style="background:#f6f1e6;color:#211803">Texto<br>#F6F1E6</div>
+    <div class="sw" style="background:#a89e8a;color:#211803">Apagado<br>#A89E8A</div>
+  </div>
+
+  <p class="h">Tipografía</p>
+  <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px;margin-bottom:26px">
+    <div class="disp" style="font-size:30px;font-weight:700;letter-spacing:-.6px">Space Grotesk · display</div>
+    <div style="font-size:11px;color:#726a58;margin:2px 0 16px">Títulos, cantidades, marca · 600–700</div>
+    <div style="font-size:18px;font-weight:600">Manrope · body — legible, moderna</div>
+    <div style="font-size:14px;color:#a89e8a;margin-top:4px">Cuerpo, descripciones, etiquetas · 400–800. Fallback: system-ui.</div>
+  </div>
+
+  <p class="h">Radios y espaciado</p>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <div style="width:70px;height:52px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:11px;color:#a89e8a">20 card</div>
+    <div style="width:70px;height:52px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:11px;color:#a89e8a">12 botón</div>
+    <div style="width:70px;height:52px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:11px;color:#a89e8a">pill</div>
+    <div style="font-size:12px;color:#a89e8a;margin-left:6px">Padding base 20px · gaps 9–14px · sombras suaves 0 8px 22px rgba(0,0,0,.25)</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
