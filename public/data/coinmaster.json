@@ -3,8 +3,8 @@
   "name": "Coin Master",
   "type": "link",
   "unit": "giros",
-  "updated_at": "2026-08-29T21:00:09.120Z",
-  "count": 22,
+  "updated_at": "2026-08-30T00:00:11.658Z",
+  "count": 14,
   "items": [
     {
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FSTIpOTZv_20260828",
@@ -74,46 +74,6 @@
     {
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBCnJYqE_20260827",
       "date": "20260827",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBJaWBDK_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILpAkjaz_20260826",
-      "date": "20260826",
-      "spins": 25
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INSMKDiyN_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_YTUBgITyuo_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_TWIPTtGkM_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_CHATBsyuNUq_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPefAnRK_20260826",
-      "date": "20260826",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBZqVuPV_20260826",
-      "date": "20260826",
       "spins": 50
     }
   ]
