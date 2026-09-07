@@ -3,8 +3,8 @@
   "name": "Coin Master",
   "type": "link",
   "unit": "giros",
-  "updated_at": "2026-09-06T21:00:12.208Z",
-  "count": 30,
+  "updated_at": "2026-09-07T00:00:19.500Z",
+  "count": 28,
   "items": [
     {
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INSHQPmkC_20260906",
@@ -145,16 +145,6 @@
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBuLskBn_20260904",
       "date": "20260904",
       "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILTjzFYu_20260903",
-      "date": "20260903",
-      "spins": 25
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILtjzFYu_20260903",
-      "date": "20260903",
-      "spins": 25
     }
   ]
 }
