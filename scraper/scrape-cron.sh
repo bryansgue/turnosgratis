@@ -12,12 +12,20 @@ cd "$PROJ/scraper" || exit 1
 node scrape.js
 
 cd "$PROJ" || exit 1
+# frescura para search engines: lastmod del sitemap = hoy
+sed -i "s#<lastmod>[0-9-]*</lastmod>#<lastmod>$(date -u +%F)</lastmod>#g" public/sitemap.xml 2>/dev/null
 git add -A
 if git diff --cached --quiet; then
   echo "sin cambios en los enlaces — no redeploy"
-  exit 0
+else
+  git commit -q -m "enlaces $(date -u +%F\ %H:%M)" && git push -q origin main
+  # redeploy del frontend en Coolify (solo esta app; no toca nada más)
+  curl -s -X POST "http://localhost:8000/api/v1/applications/$COOLIFY_APP/restart" \
+    -H "Authorization: Bearer $CTOKEN" -o /dev/null -w "redeploy HTTP %{http_code}\n"
 fi
-git commit -q -m "enlaces $(date -u +%F\ %H:%M)" && git push -q origin main
-# redeploy del frontend en Coolify (solo esta app; no toca nada más)
-curl -s -X POST "http://localhost:8000/api/v1/applications/$COOLIFY_APP/restart" \
-  -H "Authorization: Bearer $CTOKEN" -o /dev/null -w "redeploy HTTP %{http_code}\n"
+# IndexNow: avisar a Bing/Yandex que recrawleen (no depende del deploy)
+INDEXNOW_KEY="3bfacb3c2c15b5f0c7c6c1f49d0cd7e0"
+for u in "/" "/monopoly-go/" "/free-fire/"; do
+  curl -s -o /dev/null "https://api.indexnow.org/indexnow?url=https://turnosgratis.com${u}&key=${INDEXNOW_KEY}"
+done
+echo "IndexNow ping enviado"
