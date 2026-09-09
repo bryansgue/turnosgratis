@@ -3,9 +3,59 @@
   "name": "Coin Master",
   "type": "link",
   "unit": "giros",
-  "updated_at": "2026-09-09T09:00:15.995Z",
-  "count": 26,
+  "updated_at": "2026-09-09T12:00:12.991Z",
+  "count": 27,
   "items": [
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_YTUBJIglqQ_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_TWIszZfGy_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_CHATBoPeecM_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INSlMrVUJ_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBHmCaSb_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBnealvc_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPWumenr_20260909",
+      "date": "20260909",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_WATSJWiaPW_20260908",
+      "date": "20260908",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPiopLTe_20260908",
+      "date": "20260908",
+      "spins": 50
+    },
+    {
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INScAaWDg_20260908",
+      "date": "20260908",
+      "spins": 50
+    },
     {
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_WATSJwiaPW_20260908",
       "date": "20260908",
@@ -32,14 +82,9 @@
       "spins": 50
     },
     {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPiopLTe_20260908",
-      "date": "20260908",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INScAaWDg_20260908",
-      "date": "20260908",
-      "spins": 50
+      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILRTrsLJ_20260907",
+      "date": "20260907",
+      "spins": 25
     },
     {
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILovilht_20260907",
@@ -95,46 +140,6 @@
       "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_EMAILsDxirr_20260906",
       "date": "20260906",
       "spins": 40
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPaBWZyk_20260906",
-      "date": "20260906",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_HELPabWZyk_20260906",
-      "date": "20260906",
-      "spins": 50
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FSTYnjmmR_20260906",
-      "date": "20260906",
-      "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_THREibrLuZ_20260906",
-      "date": "20260906",
-      "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_CHATBtJhZkY_20260906",
-      "date": "20260906",
-      "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_INSHQPmkC_20260906",
-      "date": "20260906",
-      "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBsxwzXV_20260906",
-      "date": "20260906",
-      "spins": 75
-    },
-    {
-      "url": "https://rewards.coinmaster.com/rewards/rewards.html?c=pe_FCBoUdCKB_20260906",
-      "date": "20260906",
-      "spins": 75
     }
   ]
 }
